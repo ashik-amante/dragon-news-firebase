@@ -4,7 +4,11 @@ import { AuthContext } from "../../../Providers/Authproviders";
 
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext)
+    const { user,logOut } = useContext(AuthContext)
+
+    const handleLogout = () =>{
+        logOut()
+    }
 
     const navlinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -52,7 +56,7 @@ const Navbar = () => {
                         src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                 </div>
                 {
-                    user ? <button>Sign Out</button> : <Link>
+                    user ? <button onClick={handleLogout}>Sign Out</button> : <Link>
                         <button className="btn">LogIn</button>
                     </Link>
                 }

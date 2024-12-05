@@ -17,8 +17,8 @@ const Home = () => {
             <Navbar></Navbar>
 
             <div className="grid grid-cols-4 gap-6">
-                <div className="col-span-1 border"> <LeftSIde></LeftSIde> </div>
-                <div className="text-2xl col-span-2 border ">
+                <div className="col-span-1 "> <LeftSIde></LeftSIde> </div>
+                <div className="text-2xl col-span-2  ">
                     <h1 className='text-xl'>Dragon news home</h1>
                     <div>
                         {
@@ -26,7 +26,7 @@ const Home = () => {
                         }
                     </div>
                 </div>
-                <div className="col-span-1 border"><Rightside></Rightside></div>
+                <div className="col-span-1 "><Rightside></Rightside></div>
 
             </div>
         </div>
